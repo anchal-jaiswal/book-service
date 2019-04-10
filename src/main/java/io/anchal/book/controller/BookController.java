@@ -23,5 +23,26 @@ public class BookController {
 		Book book= new Book("11100", "A1100", "JAVA", "XYZ", 2000.00, new Date());
 		//return book;
 		return bookRepository.save(book);
+		
+	}
+	
+	@GetMapping("/book/update")
+	public Book update() {
+		
+		Book book= new Book("11100", "A1101", "JAVASCRIPT", "XYZ", 2500.00, new Date());
+		//return book;
+		return bookRepository.save(book);
+		
+	}
+	
+	
+	@GetMapping("/book/delete")
+	public void delete() {
+		
+		
+		//return book;
+		 bookRepository.deleteById("11100");
+		 return;
+		
 	}
 }
